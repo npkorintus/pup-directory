@@ -1,0 +1,12 @@
+<div class="photo-component">
+  <h2 class="breed-name">{{breedName}}</h2>
+  <div class="photo-container">
+    @if(photo) {
+        <img class="breed-photo" alt="photo of {{breedName}}" [src]="photo">
+    }
+    @else {
+      <div class="spinner-border" role="status"></div>
+    }
+  </div>
+  <button class="btn btn-primary" (click)="getPhoto()">View another photo</button>
+</div>

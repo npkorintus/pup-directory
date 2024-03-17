@@ -1,0 +1,16 @@
+.photo-component {
+  text-align: center;
+}
+
+.breed-name {
+  text-transform: capitalize;
+}
+
+.breed-photo {
+  max-width:  400px;
+  max-height: 400px;
+}
+
+.photo-container {
+  margin-bottom: 0.5rem;
+}
