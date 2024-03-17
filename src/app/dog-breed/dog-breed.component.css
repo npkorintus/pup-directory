@@ -1,0 +1,17 @@
+.card {
+  text-align: center;
+}
+
+.card-title {
+  text-transform: capitalize;
+}
+
+div.breed a {
+  padding-left: 20px;
+  text-decoration: none;
+}
+
+div.breed a::after {
+  content: "\203A";
+  margin-left: 5px;
+}
