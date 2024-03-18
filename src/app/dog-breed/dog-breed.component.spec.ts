@@ -11,7 +11,7 @@ describe('DogBreedComponent', () => {
       imports: [DogBreedComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(DogBreedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

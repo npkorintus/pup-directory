@@ -11,7 +11,7 @@ describe('PhotoComponent', () => {
       imports: [PhotoComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(PhotoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

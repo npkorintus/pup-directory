@@ -11,5 +11,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './dog-breed.component.css'
 })
 export class DogBreedComponent {
-  @Input() dogBreed!: DogBreed;
+  @Input() dogBreed!: DogBreed | undefined;
+
+  constructor() {}
 }
