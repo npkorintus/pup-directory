@@ -18,7 +18,7 @@ export class HomeComponent {
   constructor() {
     this.dogService.getAll().then((dogBreedList: DogBreed[]) => {
       this.dogBreedList = dogBreedList;
-      console.log('dogBreedList: ', dogBreedList)
+      // console.log('dogBreedList: ', dogBreedList)
     });
   }
 }

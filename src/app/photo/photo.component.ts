@@ -15,21 +15,29 @@ export class PhotoComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   dogBreed: DogBreed | undefined;
   breedName: string;
-  masterBreed: string;
+  // masterBreed: string;
+  masterBreed: boolean;
   subBreed: string;
   photo: string | undefined;
   dogService = inject(DogService);
 
   constructor() {
-    const dogBreed = this.route.snapshot.params["breed"];
+    const dogBreedName = this.route.snapshot.params["breed"];
+    console.log('dogBreed: ', dogBreedName)
     const queryParams = this.route.snapshot.queryParams;
+    console.log('queryParams: ', queryParams)
 
-    this.breedName = dogBreed;
+    const dogBreed = this.dogBreed;
+    console.log('dogBreed: ', dogBreed)
+    this.breedName = dogBreedName;
+    // this.breedName = '';
+    // this.breedName = queryParams['masterBreed'] ? `${queryParams['subBreed']} ${dogBreed}` : dogBreed;
     this.masterBreed = queryParams['masterBreed'];
     this.subBreed = queryParams['subBreed'];
 
     const data: DogBreed = {
-      name: dogBreed,
+      name: dogBreedName,
+      // name: '',
       masterBreed: queryParams['masterBreed'],
       subBreed: queryParams['subBreed']
     };
@@ -40,6 +48,7 @@ export class PhotoComponent {
   getPhoto() {
     const data: DogBreed = {
       name: this.breedName,
+      // name: this.dogBreedName,
       masterBreed: this.masterBreed,
       subBreed: this.subBreed
     };

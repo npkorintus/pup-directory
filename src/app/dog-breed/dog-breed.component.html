@@ -4,9 +4,16 @@
       <div class="card-body">
         <h5 class="card-title">{{dogBreed?.name}}</h5>
         @if(dogBreed?.masterBreed) {
+          <!-- <a
+            [routerLink]="['/photo', dogBreed?.name]"
+            [queryParams]="{masterBreed: dogBreed?.masterBreed, subBreed: dogBreed?.subBreed}"
+          > -->
           <a
             [routerLink]="['/photo', dogBreed?.name]"
-            [queryParams]="{masterBreed: dogBreed?.masterBreed, subBreed: dogBreed?.subBreed}">View</a>
+            [queryParams]="{subBreed: dogBreed?.subBreed}"
+          >
+            View
+          </a>
         }
         @else {
           <a [routerLink]="['/photo', dogBreed?.name]">View</a>
